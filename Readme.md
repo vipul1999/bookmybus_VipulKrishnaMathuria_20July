@@ -1,6 +1,5 @@
 Here's the reformatted `README.md` for the repository:
 
-```markdown
 # Bus Ticket Management System
 
 ## Overview
