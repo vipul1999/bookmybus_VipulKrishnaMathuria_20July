@@ -1,4 +1,4 @@
-Based on the updated `TicketController`, here's the revised `README.md` for the repository:
+Here's the reformatted `README.md` for the repository:
 
 ```markdown
 # Bus Ticket Management System
@@ -49,7 +49,7 @@ The Bus Ticket Management System is a RESTful API designed for managing bus rout
   - `date`: Date of travel in `YYYY-MM-DD` format
 
 **Example Request:**
-```
+```plaintext
 GET /api/buses/search?from=CityA&to=CityB&date=2024-07-21
 ```
 
@@ -82,7 +82,7 @@ GET /api/buses/search?from=CityA&to=CityB&date=2024-07-21
    - `bus_id`: Bus ID (e.g., 1)
 
 **Example Request 1:**
-```
+```plaintext
 GET /api/buses/1/available-seats
 ```
 
@@ -112,7 +112,7 @@ GET /api/buses/1/available-seats
 ```
 
 **Example Request 2:**
-```
+```plaintext
 GET /api/buses/2/available-seats
 ```
 
@@ -156,7 +156,7 @@ GET /api/buses/2/available-seats
     ```
 
 **Example Request:**
-```
+```plaintext
 POST /api/buses/book
 ```
 
@@ -192,4 +192,4 @@ Feel free to submit issues, feature requests, or pull requests. Please follow th
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
 
-This `README.md` file now includes the updated endpoint details based on the `TicketController` and adheres to Markdown formatting.
+This updated `README.md` now aligns with the provided `TicketController` and maintains proper Markdown formatting.
