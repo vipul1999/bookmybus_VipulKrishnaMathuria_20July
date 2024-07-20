@@ -47,4 +47,16 @@ public class TicketController {
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
         }
     }
+
+    @GetMapping("/user/{user_id}/tickets")
+    public ResponseEntity<ApiResponse<List<TicketDto>>> getUserTickets(@PathVariable Long user_id) {
+        try {
+            List<TicketDto> tickets = ticketService.getTicketsByUserId(user_id);
+            ApiResponse<List<TicketDto>> response = new ApiResponse<>("success", "Tickets retrieved successfully", tickets);
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (RuntimeException e) {
+            ApiResponse<List<TicketDto>> response = new ApiResponse<>("error", e.getMessage(), null);
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        }
+    }
 }

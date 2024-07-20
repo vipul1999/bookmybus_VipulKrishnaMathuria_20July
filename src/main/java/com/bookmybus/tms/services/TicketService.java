@@ -176,4 +176,22 @@ public class TicketService {
 
     }
 
+    public List<TicketDto> getTicketsByUserId(Long userId) {
+        List<Ticket> tickets = ticketRepository.findByCustomerId(userId);
+        return tickets.stream()
+                .map(this::convertToDto)
+                .collect(Collectors.toList());
+    }
+
+    private TicketDto convertToDto(Ticket ticket) {
+        // Conversion logic from Ticket entity to TicketDto
+        return new TicketDto(
+                ticket.getId(),
+                ticket.getRouteBus().getBus().getVehicleRegistrationNumber(),
+                ticket.getSeatNumber(),
+                ticket.getBookingTime(),
+                ticket.getTicketStatus()
+        );
+    }
+
 }

@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "80e05f48-0e56-44bc-812b-188c434789a8",
+		"name": "Bus Ticket managment system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10125339"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/buses/search?to=Boston&from=New York&date=2024-07-21",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/buses/search?to=Boston&from=New York&date=2024-07-21",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"buses",
+						"search"
+					],
+					"query": [
+						{
+							"key": "to",
+							"value": "Boston"
+						},
+						{
+							"key": "from",
+							"value": "New York"
+						},
+						{
+							"key": "date",
+							"value": "2024-07-21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/buses/1/available-seats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/buses/2/available-seats",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"buses",
+						"2",
+						"available-seats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/buses/1/available-seats Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"routeBusId\": 1,\r\n    \"seatNumber\": 6,\r\n    \"customerId\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/buses/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"buses",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/buses/1/available-seats Copy 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"routeBusId\": 1,\r\n    \"seatNumber\": 6,\r\n    \"customerId\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/buses/user/1/tickets",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"buses",
+						"user",
+						"1",
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

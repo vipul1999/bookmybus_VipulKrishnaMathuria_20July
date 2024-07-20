@@ -15,7 +15,7 @@ import java.util.Date;
 public class Ticket extends AuditModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "route_bus_id")
