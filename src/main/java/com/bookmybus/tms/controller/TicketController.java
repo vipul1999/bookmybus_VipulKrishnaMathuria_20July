@@ -36,16 +36,6 @@ public class TicketController {
         return routeBusService.getAvailableSeats(bus_id);
     }
 
-//    @PostMapping("/book")
-//    public ResponseEntity<?> bookTicket(@RequestBody TicketBookingRequest bookingRequest) {
-//        try {
-//            Ticket bookedTicket = ticketService.bookTicket(bookingRequest);
-//            return new ResponseEntity<Ticket>(bookedTicket, HttpStatus.CREATED);
-//        } catch (RuntimeException e) {
-//            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
-//        }
-//    }
-
     @PostMapping("/book")
     public ResponseEntity<ApiResponse<TicketDto>> bookTicket(@RequestBody TicketBookingRequest bookingRequest) {
         try {
