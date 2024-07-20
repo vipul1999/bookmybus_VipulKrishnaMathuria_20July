@@ -182,6 +182,50 @@ POST /api/buses/book
 }
 ```
 
+### 4. Get User Tickets
+
+- **Endpoint:** `/api/buses/user/{user_id}/tickets`
+- **Method:** `GET`
+- **Description:** Retrieve all tickets booked by a specific user.
+- **Path Variable:**
+    - `user_id`: User ID (e.g., 2)
+
+**Example Request:**
+```
+GET /api/buses/user/2/tickets
+```
+
+**Response Format:**
+```json
+{
+  "status": "success",
+  "message": "Tickets retrieved successfully",
+  "data": [
+    {
+      "ticketId": 123,
+      "busNumber": "MH12AB1234",
+      "seatNumber": "A1",
+      "bookingTime": "2024-07-20T15:24:53.598+05:30",
+      "ticketStatus": "BOOKED"
+    },
+    {
+      "ticketId": 124,
+      "busNumber": "MH12CD5678",
+      "seatNumber": "B1",
+      "bookingTime": "2024-07-21T10:15:00.000+05:30",
+      "ticketStatus": "BOOKED"
+    }
+  ]
+}
+```
+
+**Error Response Format:**
+```json
+{
+  "status": "error",
+  "message": "User not found"
+}
+```
 ## Contributing
 
 Feel free to submit issues, feature requests, or pull requests. Please follow the standard Git workflow for contributions.
