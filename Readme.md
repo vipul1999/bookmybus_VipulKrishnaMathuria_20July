@@ -226,6 +226,17 @@ GET /api/buses/user/2/tickets
   "message": "User not found"
 }
 ```
+
+## Status of Completion of Work
+
+- 🛠️  **1.1**: Left in WIP state due to time constraints.
+- ✅ **1.2**: Get User Tickets API
+- ✅ **2.1 & 2.2**: Search Buses API
+- ✅ **3.1**: View Available Seats API
+- ✅ **4.1**: Book Ticket API
+- ✅ **4.2**: Get User Tickets API
+
+
 ## Contributing
 
 Feel free to submit issues, feature requests, or pull requests. Please follow the standard Git workflow for contributions.
