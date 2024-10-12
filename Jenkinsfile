@@ -2,39 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/vipul1999/bookmybus_VipulKrishnaMathuria_20July'
-            }
-        }
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                checkout scm
+                sh 'mvn clean install' // or your specific build command
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh 'mvn test' // or your specific test command
             }
         }
         stage('Package') {
             steps {
-                sh 'mvn package'
+                sh 'mvn package' // or your specific packaging command
             }
-        }
-        stage('Deploy') {
-            steps {
-                // Add deployment steps here, e.g., copying the jar to a server
-//                 sh 'scp target/your-app.jar user@yourserver:/path/to/deploy'
-            }
-        }
-    }
-    post {
-        success {
-            echo 'Build succeeded!'
-        }
-        failure {
-            echo 'Build failed!'
         }
     }
 }
