@@ -2,7 +2,6 @@ pipeline {
     agent any
     tools {
             maven 'my_maven' // Replace with the name you set in Global Tool Configuration
-            docker 'my_docker'
         }
 
     stages {
