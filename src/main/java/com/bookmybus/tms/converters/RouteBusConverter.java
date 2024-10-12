@@ -39,12 +39,11 @@ public class RouteBusConverter {
 
         dto.setBusArrivalTime(arrivalLocalDateTime);
         dto.setBusDestinationTime(destinationLocalDateTime);
-
-//        dto.setDate(routeBus.getDate());
         dto.setBookedSeats(routeBus.getBookedSeats());
 
         return dto;
     }
+
 
     private static ZonedDateTime convertToZonedDateTime(Date date, ZoneId zoneId) {
         return date.toInstant()

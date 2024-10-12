@@ -226,6 +226,11 @@ GET /api/buses/user/2/tickets
   "message": "User not found"
 }
 ```
+
+
+
+---
+
 ## Contributing
 
 Feel free to submit issues, feature requests, or pull requests. Please follow the standard Git workflow for contributions.
