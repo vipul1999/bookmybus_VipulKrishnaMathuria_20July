@@ -227,10 +227,23 @@ GET /api/buses/user/2/tickets
 }
 ```
 
+<<<<<<< HEAD
 
 
 ---
 
+=======
+## Status of Completion of Work
+
+- 🛠️  **1.1**: Left in WIP state due to time constraints.
+- ✅ **1.2**: Get User Tickets API
+- ✅ **2.1 & 2.2**: Search Buses API
+- ✅ **3.1**: View Available Seats API
+- ✅ **4.1**: Book Ticket API
+- ✅ **4.2**: Get User Tickets API
+
+
+>>>>>>> d3ee5ba4d26ef92ca9c6f276c776aa738ddefe5f
 ## Contributing
 
 Feel free to submit issues, feature requests, or pull requests. Please follow the standard Git workflow for contributions.
