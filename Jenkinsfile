@@ -22,17 +22,17 @@ pipeline {
                 sh 'mvn package' // or your specific packaging command
             }
         }
-        stage('Deploy') {
-            steps {
-                script {
-                    // Build Docker image
-                    sh '''
-                    docker build -t tms-app .
-                    docker rm -f tms-app-container || true
-                    docker run -d --name tms-app-container -p 8081:8081 tms-app-container
-                    '''
-                }
-            }
-        }
+//         stage('Deploy') {
+//             steps {
+//                 script {
+//                     // Build Docker image
+//                     sh '''
+//                     docker build -t tms-app .
+//                     docker rm -f tms-app-container || true
+//                     docker run -d --name tms-app-container -p 8081:8081 tms-app-container
+//                     '''
+//                 }
+//             }
+//         }
     }
 }
